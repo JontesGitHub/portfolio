@@ -1,19 +1,16 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
-import { bgColor1, color1 } from '../globalStyles'
+import { bgColor1, color1, color2 } from '../globalStyles'
+import { links } from './../data'
 
-const styles = {
-    container: {
-        maxWidth: '400px',
-        margin: '0 auto',
-        textAlign: 'center'
-    }
-}
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const NavLink = styled(Link)`
-    color: #fff;
-    flex: 1 1 auto;
+  color: #fff;
+  flex: 1 1 auto;
   margin: 20px;
   /* height: 100%; */
   font-weight: 500;
@@ -52,12 +49,10 @@ const NavLink = styled(Link)`
 
 const Nav = styled.nav`
     position: fixed;
-    /* background: #000; */
     background: ${bgColor1};
     height: 55px;
     display: flex;
     justify-content: space-between;
-    /* padding: 0.5rem calc((100vw - 1000px) / 2); */
     z-index: 10;
     width: 100%;
 `
@@ -65,13 +60,33 @@ const Nav = styled.nav`
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    max-width: 700px;
     margin: 0 auto;
   
 
   /* @media screen and (max-width: 768px) {
     display: none;
   } */
+`
+
+export const SideMenu = styled.div`
+    position: fixed;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    margin-top: 6px;
+`
+
+const SideLinks = styled.a`
+    color: ${color2};
+    margin: 0.7rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        color: #e6e6e6;
+    }
 `
 
 export default function Navbar() {
@@ -89,6 +104,20 @@ export default function Navbar() {
                     About
                 </NavLink>
             </NavMenu>
+            <SideMenu>
+                <SideLinks href={links.resume} target='_blank' rel='noreferrer'>
+                  See Resume
+                </SideLinks>
+                <SideLinks href={links.linkedIn} target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                </SideLinks>
+                <SideLinks href={links.github} target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faGithub} />
+                </SideLinks>
+                <SideLinks href={links.mail} target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={faAt} />
+                </SideLinks>
+            </SideMenu>
         </Nav>
     )
 }

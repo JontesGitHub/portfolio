@@ -5,7 +5,7 @@ export const color1LG = '#FD3649'
 export const color2 = '#999'
 export const bgColor1 = '#202020'
 export const bgColor2 = '#F5F5F5'
-export const footerBgColor = '#101010'
+export const footerBgColor = '#121212'
 
 // export const GlobalStyle = createGlobalStyle`
 //   * {
@@ -42,13 +42,14 @@ export const BaseSection = styled.div`
 export const Btn = styled.a`
   display: inline-block;
   position: relative;
-  padding: ${props => props.big ? '0.9rem 1.5rem 1rem 1.5rem' : '0.5rem 0.9rem 0.6rem 0.9rem'};
+  padding: ${props => props.big ? '0.9rem 1.5rem 1rem 1.5rem' : '0.5rem 0.8rem 0.6rem 0.8rem'};
   font-weight: bold;
-  font-size: ${props => props.big ? '1.2rem' : '0.8rem'};
+  font-size: ${props => props.big ? '1rem' : '0.8rem'};
   line-height: 1rem;
   z-index: 1;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
   /* color: #fff; */
+  /* text-transform: uppercase; */
 
   &:after {
     content: '';
