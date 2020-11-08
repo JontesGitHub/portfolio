@@ -10,7 +10,7 @@ export const projectList = [
         linkToRepo: 'https://www.google.com/'
     },
     {
-        title: 'Simplynotes, Spring + React',
+        title: 'Web app, Spring + React',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisiut aliquip ex ea commodo consequat. Duis aute irure Duis aute irure Duis aute irure Duis aute irure dolor inreprehenderit',
         picture: picture1,
         linkToRepo: 'https://www.google.com/'

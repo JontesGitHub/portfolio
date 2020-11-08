@@ -24,6 +24,10 @@ const IconLink = styled.a`
     &:hover {
         color: #e6e6e6;
     }
+
+    @media (max-width: 700px) {
+        font-size: 1.5rem;
+    }
 `
 
 export default function Footer() {

@@ -2,8 +2,6 @@ import React from "react";
 import ProjectItem from "../components/ProjectItem";
 import {
   color1,
-  color1LG,
-  color2,
   bgColor2,
   bgColor1,
   BaseSection,
@@ -19,6 +17,10 @@ const Title = styled.h2`
   line-height: 4rem;
   color: ${props => props.color || color1};
   margin: 0;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 const Section = styled(BaseSection)`

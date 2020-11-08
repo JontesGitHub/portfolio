@@ -4,41 +4,53 @@ import { bgColor1, Btn, color1, color2 } from "../globalStyles";
 import Fade from "react-reveal/Fade";
 
 const Div = styled.div`
-  text-align: ${(props) => props.pictureSide};
+  /* text-align: ${(props) => props.pictureSide}; */
   width: 100%;
   margin-top: 4rem;
   padding-bottom: 2.5rem;
-  height: 380px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5.8rem;
-
   overflow: hidden;
-
-  @media (max-width: 1200px) {
-    padding-bottom: 0;
-    height: 350px;
+  .image {
+    grid-area: image;
   }
-
-  @media (max-width: 960px) {
-    height: 300px;
-    grid-column-gap: 4rem;
+  .textBox {
+    grid-area: textBox;
   }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2500px));
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: 'image textBox';
+  grid-column-gap: 5rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    row-gap: 2rem;
-    height: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    column-gap: 2rem;
+    padding-bottom: 0;
   }
 
+  @media (max-width: 650px) {
+    grid-template-areas:
+      "image"
+      "textBox";
+    row-gap: 2rem;
+    column-gap: 0;
+    height: auto;
+    width: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
 `;
 
 const Image = styled.img`
+  max-height: 400px;
   width: 100%;
   border-radius: 5px;
+  @media (max-width: 768px) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  @media (max-width: 500px) {
+    max-width: 100%;
+  }
 `;
 
 const Title = styled.h2`
@@ -61,37 +73,33 @@ export default function ProjectItem({
   index,
 }) {
   const pictureSide = index % 2 === 0 ? "right" : "left";
-  let screenWidth = 1200
-
-  useEffect(() => {
-    screenWidth = window.innerWidth
-  }, [window.innerWidth])
-  
 
   return (
     <Div pictureSide={pictureSide}>
-      {pictureSide === "left" || screenWidth < 768 ? <Image pictureSide src={picture} /> : null}
+      {/* {pictureSide === "left" || screenWidth < 768 ? <Image pictureSide src={picture} /> : null} */}
+      <Image src={picture} className="image" />
 
       <Fade
-        left={pictureSide !== "left"}
-        right={pictureSide !== "right"}
+        // left={pictureSide !== "left"}
+        // right={pictureSide !== "right"}
+        bottom
         delay={600}
-        distance="90px"
+        distance="30px"
+        className="textBox"
       >
         <div>
           <Title>
             {title}
-            <span style={{ color: color1, fontSize: '1em' }}>.</span>
+            <span style={{ color: color1, fontSize: "1em" }}>.</span>
           </Title>
-
-          <p style={{ lineHeight: "1.5rem" }}>{text}</p> <br/>
-            <Btn href={linkToRepo} target="_blank" rel="noreferrer">
-              See on GitHub
-            </Btn>
+          <p style={{ lineHeight: "1.5rem" }}>{text}</p> <br />
+          <Btn href={linkToRepo} target="_blank" rel="noreferrer">
+            See on GitHub
+          </Btn>
         </div>
       </Fade>
 
-      {pictureSide === "right" && screenWidth > 768 ? <Image src={picture} /> : null}
+      {/* {pictureSide === "right" && screenWidth > 768 ? <Image src={picture} /> : null} */}
     </Div>
   );
 }

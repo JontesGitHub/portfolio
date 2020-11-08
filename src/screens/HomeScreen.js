@@ -1,32 +1,38 @@
 import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import {
-  color1,
-  color1LG,
-  bgColor1,
-  Btn,
-  bgColor2,
-  color2,
-  BaseSection,
-} from "../globalStyles";
+import { color1, bgColor1, Btn, color2, BaseSection } from "../globalStyles";
 import Fade from "react-reveal/Fade";
 import TextLoop from "react-text-loop";
 
 const Section = styled(BaseSection)`
   background-color: ${bgColor1};
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
+  padding-bottom: 1%;
 `;
 
 const Title = styled.h1`
   color: #fff;
   font-size: 4.4rem;
-  /* line-height: 5rem; */
   font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   margin: 0;
+  line-height: 5.5rem;
+
+  span {
+    font-size: 4.4rem;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    line-height: 4.5rem;
+
+    @media (max-width: 650px) {
+      display: block;
+    }
+  }
 `;
 
 const TitleSpan = styled(Title)`
@@ -47,8 +53,11 @@ const Container = styled.div`
   }
 
   @media (max-width: 960px) {
-    max-width: 1100px;
-    margin: 0 11%;
+    padding-top: 20%;
+  }
+
+  @media (max-width: 500px) {
+    padding-top: 40%;
   }
 `;
 
@@ -64,18 +73,43 @@ export default function HomeScreen() {
               <br />
             </TitleSpan>
             <TextLoop springConfig={{ swiftness: 50 }}>
-              <Title>Backend Developer</Title>
-              <Title>Software Engineer</Title>
+              <Title>
+                Backend
+                <span> Developer<b
+                  style={{
+                    color: color1,
+                    fontWeight: "700",
+                    fontSize: "4.4rem",
+                  }}
+                >
+                  .
+                </b></span>
+
+              </Title>
+              <Title>
+                Software
+                <span> Engineer<b
+                  style={{
+                    color: color1,
+                    fontWeight: "700",
+                    fontSize: "4.4rem"
+                  }}
+                >
+                  .
+                </b></span>
+              </Title>
             </TextLoop>
 
-            <span style={{ color: color1, fontWeight: '700', fontSize: '4.4rem' }}>.</span>
+            {/* <b style={{ color: color1, fontWeight: "700", fontSize: "4.4rem", display: 'inline-block' }}>
+              .
+            </b> */}
           </div>
           <p
             style={{
               fontSize: "0.9rem",
               color: color2,
               padding: "0.8rem 0 5rem 0.1rem",
-              letterSpacing: '4px'
+              letterSpacing: "4px",
             }}
           >
             WITH A TOUCH OF FRONTEND.
