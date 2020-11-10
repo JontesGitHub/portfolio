@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const color1 = '#FF4B5C'
 export const color1LG = '#FD3649'
@@ -12,16 +12,15 @@ export const footerBgColor = '#121212'
 //   box-sizing: border-box;
 //   /* margin: 0;
 //   padding: 0; */
-//   font-family: 'Open Sans', sans-serif;
 //  } 
 // `
 
 export const BaseSection = styled.div`
-  font-size: 20px;
+  /* font-size: 20px;
 
   @media (max-width: 960px) {
     font-size: 16px;
-  }
+  } */
 `
 
 // export const Container = styled.div`
@@ -43,7 +42,7 @@ export const Btn = styled.a`
   display: inline-block;
   position: relative;
   padding: ${props => props.big ? '0.9rem 1.5rem 1rem 1.5rem' : '0.5rem 0.8rem 0.6rem 0.8rem'};
-  font-weight: bold;
+  font-weight: 700;
   font-size: ${props => props.big ? '1rem' : '0.8rem'};
   line-height: 1rem;
   z-index: 1;

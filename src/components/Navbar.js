@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import { bgColor1, color1, color2 } from "../globalStyles";
@@ -14,7 +14,7 @@ const NavLink = styled(Link)`
   flex: 1 1 auto;
   margin: 20px;
   /* height: 100%; */
-  font-weight: 500;
+  font-weight: 600;
   padding: 17px 10px;
   display: flex;
   position: relative;

@@ -2,31 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import { bgColor1, BaseSection, color2, color1 } from "../globalStyles";
 import Fade from "react-reveal/Fade";
-import Footer from "../components/Footer";
 import { aboutMe } from "../data";
 
 const Section = styled(BaseSection)`
   background-color: ${bgColor1};
-  min-height: calc(100vh - 50px);
+  min-height: calc(85vh - 50px);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media (max-width: 700px) {
+  /* @media (max-width: 700px) {
     min-height: calc(100vh - 50px);
-  }
+  } */
 `;
 const GridContainer = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 80%;
+  /* margin-top: 3%; */
+  /* margin: 0 auto; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 1fr;
   grid-gap: 5.5rem;
-  padding-top: 2%;
-  min-height: 55%;
+  /* padding-top: 2%; */
+  /* min-height: 55%; */
   overflow: hidden;
-
-  .text-box {
-    padding-top: 15%;
-  }
 
   @media (max-width: 1500px) {
     max-width: 1200px;
@@ -48,7 +47,7 @@ const GridContainer = styled.div`
       padding: 0 3rem;
       text-align: center;
     }
-  }
+  } 
   @media (max-width: 500px) {
     .text-box {
       padding: 0;
@@ -57,7 +56,6 @@ const GridContainer = styled.div`
 `;
 const Title = styled.h2`
   font-size: 4rem;
-  font-family: "Open Sans";
   font-weight: 800;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
   line-height: 4rem;
@@ -79,16 +77,15 @@ const Title = styled.h2`
 `;
 
 const Image = styled.img`
-  height: 100%;
-  border-radius: 5px;
+  width: 100%;
 
-  @media (max-width: 1100px) {
+  /* @media (max-width: 1100px) {
     height: 80%;
     margin: auto 0;
   }
   @media (max-width: 700px) {
     margin: 0 auto;
-  }
+  } */
 `;
 
 const Text = styled.p`
@@ -121,7 +118,7 @@ export default function AboutScreen() {
         </Fade>
         <Image src={aboutMe.image} />
       </GridContainer>
-      <Footer />
+      {/* <Footer /> */}
     </Section>
   );
 }

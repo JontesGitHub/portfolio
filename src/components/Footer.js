@@ -10,16 +10,20 @@ import { links } from '../data'
 const Section = styled(BaseSection)`
     background-color: ${footerBgColor};
     height: 16vh;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
-    text-align: center;
+    /* text-align: center;
+    padding-top: 8px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `
 const IconLink = styled.a`
-    position: relative;
     color: ${color2};
     margin: 2rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 
     &:hover {
         color: #e6e6e6;
@@ -33,7 +37,7 @@ const IconLink = styled.a`
 export default function Footer() {
     return (
         <Section>
-            <p style={{ color: color2, fontSize: '1.1rem' }}>
+            <p style={{ color: color2, fontSize: '1.1rem', marginTop: '0' }}>
                 Find me on...
             </p>
             <div>

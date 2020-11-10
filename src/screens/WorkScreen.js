@@ -5,23 +5,19 @@ import {
   bgColor2,
   bgColor1,
   BaseSection,
-  color2,
 } from "../globalStyles";
 import styled from "styled-components";
 import { projectList } from "../data";
 
 const Title = styled.h2`
   font-size: ${props => props.size || '4rem'};
-  font-family: "Open Sans";
   font-weight: 800;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
-  line-height: 4rem;
   color: ${props => props.color || color1};
   margin: 0;
 
   .my {
-    font-size: 0.9em;
-    font-family: "Open Sans";
+    font-size: 0.8em;
     display: block;
     font-weight: 800;
     text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
@@ -47,7 +43,7 @@ const Section = styled(BaseSection)`
 
 const Container = styled.div`
   margin: 0 auto;
-  padding-top: 3%;
+  padding-top: 2%;
   max-width: 1100px;
 
   @media (max-width: 1200px) {

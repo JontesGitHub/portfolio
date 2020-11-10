@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { bgColor1, Btn, color1, color2 } from "../globalStyles";
+import { bgColor1, Btn, color1 } from "../globalStyles";
 import Fade from "react-reveal/Fade";
 
 const Div = styled.div`
@@ -17,7 +17,6 @@ const Div = styled.div`
   }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-areas: 'image textBox';
   grid-column-gap: 5rem;
 
@@ -44,7 +43,6 @@ const Image = styled.img`
   border-radius: 5px;
   @media (max-width: 768px) {
     max-width: 80%;
-    /* margin: auto 0; */
   }
   @media (max-width: 500px) {
     max-width: 100%;

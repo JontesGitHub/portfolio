@@ -83,22 +83,22 @@ const StyledMenu = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
   padding: 1rem 0;
   margin: 1rem auto;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.5rem;
   color: #000;
   transition: color 0.3s linear;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     text-align: center;
   }
 
   @media (max-height: 380px) {
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
   }
 
   &:hover {
@@ -118,14 +118,14 @@ const FooterMenu = styled.div`
   left: 0;
   right: 0;
   text-align: center;
-  bottom: 6%;
+  bottom: 7%;
 
   a {
     color: ${color2};
     margin: 1.1rem;
-    font-size: 1rem;
+    font-size: 1.7rem;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
   }
 `;
 

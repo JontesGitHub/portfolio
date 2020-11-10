@@ -9,23 +9,23 @@ const Section = styled(BaseSection)`
   background-color: ${bgColor1};
   min-height: 100vh;
   overflow: hidden;
-  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.h1`
   color: #fff;
   font-size: 4.4rem;
-  font-family: "Open Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
   margin: 0;
   line-height: 5.5rem;
 
   span {
     font-size: 1em;
-    font-family: "Open Sans";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     margin: 0;
     line-height: 4.5rem;
 
@@ -52,27 +52,11 @@ const TitleSpan = styled(Title)`
 `;
 
 const Container = styled.div`
-  margin: 0 auto;
-  padding-top: 15%;
-  max-width: 1200px;
-
-  @media (max-width: 1400px) {
-    max-width: 1100px;
-    margin: 0 11%;
-    padding-top: 16%;
-  }
-
-  @media (max-width: 960px) {
-    padding-top: 20%;
-  }
-
-  @media (max-width: 500px) {
-    padding-top: 35%;
-  }
-
-  @media (max-height: 650px) {
-    padding-top: 20%;
-  }
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 `;
 
 export default function HomeScreen() {

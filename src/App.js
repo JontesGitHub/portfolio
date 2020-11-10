@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import AboutScreen from "./screens/AboutScreen"
 import HomeScreen from "./screens/HomeScreen"
@@ -12,6 +13,7 @@ export default function App() {
       <HomeScreen />
       <WorkScreen />
       <AboutScreen />
+      <Footer />
     </div>
   );
 }
