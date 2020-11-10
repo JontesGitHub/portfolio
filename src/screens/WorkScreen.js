@@ -5,6 +5,7 @@ import {
   bgColor2,
   bgColor1,
   BaseSection,
+  color2,
 } from "../globalStyles";
 import styled from "styled-components";
 import { projectList } from "../data";
@@ -18,8 +19,23 @@ const Title = styled.h2`
   color: ${props => props.color || color1};
   margin: 0;
 
+  .my {
+    font-size: 0.9em;
+    font-family: "Open Sans";
+    display: block;
+    font-weight: 800;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+    color: ${props => props.color || color1};
+    margin: 0;
+  }
+
   @media (max-width: 600px) {
-    text-align: center;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 `;
 
@@ -31,7 +47,7 @@ const Section = styled(BaseSection)`
 
 const Container = styled.div`
   margin: 0 auto;
-  padding-top: 1%;
+  padding-top: 3%;
   max-width: 1100px;
 
   @media (max-width: 1200px) {
@@ -43,6 +59,12 @@ const Container = styled.div`
     padding-right: 5%;
     padding-left: 5%;
   }
+
+  @media (max-width: 650px) {
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+
 `;
 
 export default function WorkScreen() {
@@ -50,6 +72,7 @@ export default function WorkScreen() {
     let index = 1;
     return projectList.map((project) => (
       <ProjectItem
+        key={index}
         title={project.title}
         text={project.text}
         picture={project.picture}
@@ -64,9 +87,9 @@ export default function WorkScreen() {
     <Section id="work">
       <Container>
         <Title>
-          <Title size='3rem'>
+          <span className='my'>
             my
-          </Title>
+          </span>
           Work
           <span style={{ color: bgColor1, fontSize: '4rem' }}>.</span>
         </Title>

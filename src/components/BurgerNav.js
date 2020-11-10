@@ -66,19 +66,19 @@ const StyledMenu = styled.nav`
   padding-top: 4.5rem;
   top: 0;
   right: 0;
-  transition: all 0.3s ease-in-out;
-  /* transform: ${props => props.open ? "translateX(100%)" : "translateX(100%)"}; */
+  transition: transform 1s ease-in-out;
+  transform: ${({ open }) => open ? "translateX(0)" : "translateX(100%)"};
 
   @media (max-width: 500px) {
     width: 100%;
   }
 
-  @media (min-width: 769px) {
-    display: none;
-  }
-
   @media (max-height: 380px) {
     padding-top: 2.5rem;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
 

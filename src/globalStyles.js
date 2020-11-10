@@ -98,4 +98,9 @@ export const Btn = styled.a`
       width: 100%;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: ${props => props.big ? '1.1rem 1.7rem 1.2rem 1.7rem' : '0.7rem 1rem 0.8rem 1rem'};
+    font-size: ${props => props.big ? '1.2rem' : '1rem'};
+  }
 `

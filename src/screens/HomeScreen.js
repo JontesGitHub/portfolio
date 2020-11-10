@@ -22,7 +22,7 @@ const Title = styled.h1`
   line-height: 5.5rem;
 
   span {
-    font-size: 4.4rem;
+    font-size: 1em;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
@@ -32,6 +32,16 @@ const Title = styled.h1`
     @media (max-width: 650px) {
       display: block;
     }
+
+    b {
+      color: ${color1};
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    font-size: 4rem;
   }
 `;
 
@@ -57,7 +67,11 @@ const Container = styled.div`
   }
 
   @media (max-width: 500px) {
-    padding-top: 40%;
+    padding-top: 35%;
+  }
+
+  @media (max-height: 650px) {
+    padding-top: 20%;
   }
 `;
 
@@ -74,35 +88,26 @@ export default function HomeScreen() {
             </TitleSpan>
             <TextLoop springConfig={{ swiftness: 50 }}>
               <Title>
+                Problem
+                <span>
+                  -solver<b>.</b>
+                </span>
+              </Title>
+              <Title>
                 Backend
-                <span> Developer<b
-                  style={{
-                    color: color1,
-                    fontWeight: "700",
-                    fontSize: "4.4rem",
-                  }}
-                >
-                  .
-                </b></span>
-
+                <span>
+                  {" "}
+                  Developer<b>.</b>
+                </span>
               </Title>
               <Title>
                 Software
-                <span> Engineer<b
-                  style={{
-                    color: color1,
-                    fontWeight: "700",
-                    fontSize: "4.4rem"
-                  }}
-                >
-                  .
-                </b></span>
+                <span>
+                  {" "}
+                  Engineer<b>.</b>
+                </span>
               </Title>
             </TextLoop>
-
-            {/* <b style={{ color: color1, fontWeight: "700", fontSize: "4.4rem", display: 'inline-block' }}>
-              .
-            </b> */}
           </div>
           <p
             style={{
