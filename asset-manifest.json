@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.021ea3f5.chunk.css",
-    "main.js": "/portfolio/static/js/main.7fb26271.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7fb26271.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.f0d9e4dd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f0d9e4dd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d02724b9.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.d02724b9.js.map",
     "static/js/2.869ccc34.chunk.js": "/portfolio/static/js/2.869ccc34.chunk.js",
@@ -11,17 +11,17 @@
     "static/css/main.021ea3f5.chunk.css.map": "/portfolio/static/css/main.021ea3f5.chunk.css.map",
     "static/js/2.869ccc34.chunk.js.LICENSE.txt": "/portfolio/static/js/2.869ccc34.chunk.js.LICENSE.txt",
     "static/media/Final Thesis.25389d43.pdf": "/portfolio/static/media/Final Thesis.25389d43.pdf",
-    "static/media/Resume Johannes.2fab8b6a.pdf": "/portfolio/static/media/Resume Johannes.2fab8b6a.pdf",
+    "static/media/Resume Johannes.d62dfbd0.pdf": "/portfolio/static/media/Resume Johannes.d62dfbd0.pdf",
     "static/media/bildcv.49bbb8da.png": "/portfolio/static/media/bildcv.49bbb8da.png",
+    "static/media/brickawsimg.83094b20.PNG": "/portfolio/static/media/brickawsimg.83094b20.PNG",
     "static/media/project1image.aeba1771.svg": "/portfolio/static/media/project1image.aeba1771.svg",
     "static/media/project2image.982eaec6.svg": "/portfolio/static/media/project2image.982eaec6.svg",
-    "static/media/project3image.e2d700e1.svg": "/portfolio/static/media/project3image.e2d700e1.svg",
     "static/media/project4image.662bce98.svg": "/portfolio/static/media/project4image.662bce98.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d02724b9.js",
     "static/js/2.869ccc34.chunk.js",
     "static/css/main.021ea3f5.chunk.css",
-    "static/js/main.7fb26271.chunk.js"
+    "static/js/main.f0d9e4dd.chunk.js"
   ]
 }
